@@ -31,9 +31,10 @@ class TitleFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
                 R.layout.fragment_title,container,false)
         binding.playButton.setOnClickListener{view : View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)}
-        setHasOptionsMenu(true)
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+        }
         return binding.root
+
     }
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         super.onCreateOptionsMenu(menu, inflater)
